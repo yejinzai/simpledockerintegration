@@ -3,9 +3,9 @@ services:
   ingest:
       image: "simpleflume"
       volumes:
-        - "/Users/mk250075/dev/simpledemo/simpleflume/source:/opt/flume/source"
-        - "/Users/mk250075/dev/simpledemo/simpleflume/target:/opt/flume/target"
+        - "/simpledockerintegration/simpleflume/source:/opt/flume/source"
+        - "/simpledockerintegration/simpleflume/target:/opt/flume/target"
   compute:
       image: "simplespark"
       volumes:
-        - "/Users/mk250075/dev/simpledemo/simpleflume/target:/opt/spark/source"
+        - "/simpledockerintegration/simpleflume/target:/opt/spark/source"
