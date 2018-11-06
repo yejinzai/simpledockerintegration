@@ -10,8 +10,8 @@ docker build -t simpleflume .
 (-t means to name the image)
 
 docker run 
--v simpledockerintegration/simpleflume/source:/opt/flume/source  \
--v simpledockerintegration/simpleflume/target:/opt/flume/target  \
+-v /simpledockerintegration/simpleflume/source:/opt/flume/source  \
+-v /simpledockerintegration/simpleflume/target:/opt/flume/target  \
 -t simpleflume
 (-v bind a volume)
 
@@ -27,7 +27,7 @@ sbt package
 
 docker build -t simplespark .
 
-docker run -v simpledockerintegration/simpleflume/target:/opt/spark/source \
+docker run -v /simpledockerintegration/simpleflume/target:/opt/spark/source \
 -t simplespark
 
 ---- 
